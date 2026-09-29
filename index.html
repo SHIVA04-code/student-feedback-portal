@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7fb">
+  <title>Campus Voice — Student Feedback</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Campus Voice home"><span class="brand-mark">C</span><span>campus<span class="brand-light">voice</span></span></a>
+    <nav aria-label="Main navigation"><a class="nav-link active" href="#feedback">Feedback</a><a class="nav-link" href="#about">About</a></nav>
+    <a class="student-pill" href="#feedback"><span class="status-dot"></span> Student portal</a>
+  </header>
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy"><div class="eyebrow"><span class="eyebrow-line"></span> YOUR VOICE SHAPES CAMPUS</div>
+        <h1>A better campus<br>starts with <span>you.</span></h1>
+        <p class="hero-text">Share what’s working and what could be better. Your honest feedback helps us make student life more thoughtful, every day.</p>
+        <a class="primary-button hero-cta" href="#feedback">Share your feedback <span aria-hidden="true">↗</span></a>
+        <div class="trust"><span class="avatar-stack"><i>J</i><i>A</i><i>M</i></span><span>Made better by <strong>students like you</strong></span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of students sharing ideas" role="img">
+        <div class="art-sun"></div><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="speech-card"><span class="speech-icon">✳</span><div><b>Every idea matters</b><small>Be part of the change</small></div><span class="speech-arrow">↗</span></div>
+        <div class="person person-left"><div class="hair hair-left"></div><div class="head head-left"></div><div class="body body-left"></div><div class="arm arm-left"></div></div>
+        <div class="person person-right"><div class="hair hair-right"></div><div class="head head-right"></div><div class="body body-right"></div><div class="arm arm-right"></div></div>
+        <div class="art-spark spark-a">✳</div><div class="art-spark spark-b">✦</div><div class="art-spark spark-c">✳</div>
+        <div class="art-caption"><span class="caption-dot"></span> ONE CAMPUS. MANY PERSPECTIVES.</div>
+      </div>
+    </section>
+    <section class="form-section" id="feedback">
+      <div class="section-heading"><div class="eyebrow"><span class="eyebrow-line"></span> WE’RE LISTENING</div><h2>Tell us what’s on your mind.</h2><p>A few minutes can make a meaningful difference.</p></div>
+      <div class="form-layout">
+        <form id="feedback-form" class="feedback-card">
+          <div class="form-top"><div><span class="form-label">YOUR FEEDBACK</span><h3>Start a conversation</h3></div><span class="lock-mark" title="Your details stay private">♧</span></div>
+          <div class="field-row"><label class="field"><span>Your name</span><input name="name" autocomplete="name" placeholder="e.g. Alex Morgan" required maxlength="80"></label><label class="field"><span>Student email</span><input name="email" type="email" autocomplete="email" placeholder="you@university.edu" required maxlength="120"></label></div>
+          <div class="field-row"><label class="field"><span>School / department</span><select name="department" required><option value="" disabled selected>Select your department</option><option>Arts & Humanities</option><option>Business</option><option>Computer Science</option><option>Education</option><option>Engineering</option><option>Health & Sciences</option><option>Social Sciences</option><option>Other</option></select></label><label class="field"><span>What’s this about?</span><select name="category" required><option value="" disabled selected>Choose a topic</option><option>Academics & teaching</option><option>Campus facilities</option><option>Dining & food</option><option>Student support</option><option>Clubs & community</option><option>Technology</option><option>Other</option></select></label></div>
+          <fieldset class="rating-field"><legend>How has your experience been?</legend><div class="rating-options"><label><input type="radio" name="rating" value="1" required><span><b>☹</b><small>Needs work</small></span></label><label><input type="radio" name="rating" value="2"><span><b>🙁</b><small>Could improve</small></span></label><label><input type="radio" name="rating" value="3"><span><b>😐</b><small>It’s okay</small></span></label><label><input type="radio" name="rating" value="4"><span><b>🙂</b><small>Pretty good</small></span></label><label><input type="radio" name="rating" value="5"><span><b>😊</b><small>Excellent</small></span></label></div></fieldset>
+          <label class="field message-field"><span>Your thoughts</span><textarea name="message" rows="5" placeholder="Tell us a little more. What happened, and what would you like to see?" required minlength="10" maxlength="1500"></textarea><small class="counter"><span id="char-count">0</span>/1500</small></label>
+          <label class="checkbox-row"><input type="checkbox" name="followup"><span>I’m happy to be contacted about my feedback</span></label>
+          <div class="submit-row"><button class="primary-button" type="submit">Send feedback <span aria-hidden="true">→</span></button><span class="privacy-note">Your feedback is treated with care.</span></div>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        </form>
+        <aside class="side-note"><div class="note-icon">✳</div><h3>Real change<br>begins here.</h3><p>Every response goes to the people who can make a difference. Your perspective helps us focus on what matters most.</p><div class="note-rule"></div><div class="note-foot"><span class="note-check">✓</span><span><b>Thoughtfully reviewed</b><small>Your input is read by our student experience team.</small></span></div></aside>
+      </div>
+    </section>
+    <section class="about-strip" id="about"><div><span class="about-kicker">A CAMPUS THAT LISTENS</span><h2>Small notes. <span>Big difference.</span></h2></div><p>Campus Voice is a space for students to share ideas, raise concerns, and help shape a university experience we can all feel good about.</p><a href="#feedback" aria-label="Share feedback">↑</a></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">C</span><span>campus<span class="brand-light">voice</span></span></a><span>Made for a campus that keeps growing. <span id="year"></span></span><a href="#feedback">Share feedback ↑</a></footer>
+</body>
+</html>

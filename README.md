@@ -12,18 +12,16 @@ $env:PATH = "$dockerDir;$env:PATH"
 docker build -t student-feedback:latest .
 ```
 
-For a first run, start it with `docker run -d --name student-feedback-portal -p 8081:80 student-feedback:latest`. This container is already running on the current computer; use `docker start student-feedback-portal` to start it again later. Open <http://localhost:8081>. The image name matches the Docker Desktop screenshot. Jenkins uses port `8080`, so the portal is published on `8081`.
+For a first run, start it with `docker run -d --name student-feedback-portal -p 8081:80 student-feedback:latest`. To start it again after it has been stopped, run `docker start student-feedback-portal`. Open <http://localhost:8081>. The image name matches the Docker Desktop screenshot. Jenkins uses port `8080`, so the portal is published on `8081`.
 
-## Put the project on GitHub
+## GitHub repository
 
-Create a GitHub repository named `Student-Feedback-Portal`, then run these commands from this folder (replace the URL with your own repository URL):
+The project repository is [SHIVA04-code/student-feedback-portal](https://github.com/SHIVA04-code/student-feedback-portal). To publish a later local change, commit it and push the `main` branch:
 
 ```powershell
-git init -b main
 git add .
-git commit -m "Initial student feedback portal"
-git remote add origin https://github.com/YOUR-USERNAME/Student-Feedback-Portal.git
-git push -u origin main
+git commit -m "Describe your change"
+git push origin main
 ```
 
 ## Create the Jenkins job
